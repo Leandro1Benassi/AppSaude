@@ -1,20 +1,41 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import React, {useEffect} from "react";
+import Routes from './src/routes';
+import 'react-native-gesture-handler';
+
+import {
+  useFonts,
+  Jost_400Regular,
+  Jost_600SemiBold,
+} from '@expo-google-fonts/jost';
+
+import AppLoading from 'expo-app-loading';
+import * as Updates from "expo-updates";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const [fontsLoaded] = useFonts({
+    Jost_400Regular,
+    Jost_600SemiBold
+  });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  useEffect(() => {
+    async function updateApp() {
+      const { isAvailable } = await Updates.checkForUpdateAsync();
+
+      if (isAvailable) {
+        await Updates.fetchUpdateAsync();
+        await Updates.reloadAsync();
+      }
+    }
+
+    updateApp();
+  }, []);
+
+  if (!fontsLoaded) return <AppLoading />;
+
+  return (
+    <Routes />
+  );
+
+}

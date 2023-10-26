@@ -17,14 +17,18 @@
     "ios": {
       "supportsTablet": true
     },
+  
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+      "package": "com.benassileandro.appModelo",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d5f338f6-bf04-4712-a2d8-eaccd1b79758"
+      }
     }
   }
 }
