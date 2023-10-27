@@ -10,7 +10,7 @@ import {
     Image,
     StatusBar,
     Alert,
-    
+
   } from 'react-native';
 
   

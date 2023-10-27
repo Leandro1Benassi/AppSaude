@@ -8,9 +8,6 @@ import fonts from "../../../styles/fonts";
 import { AntDesign, MaterialIcons, MaterialCommunityIcons, EvilIcons, Ionicons } from '@expo/vector-icons';
 import { useState } from 'react';
 
-
-
-
 interface DadosProps {
     data:{
         id: string;
@@ -19,6 +16,7 @@ interface DadosProps {
         pas: string;
         glicose: string;
         card:string;
+        status:string;
         
     }
 }
@@ -92,6 +90,7 @@ const CardRemedio = ({ data }: DadosProps) => {
                         <Text style={{ color: '#000' }}>sistólica: {data.pas} x {data.pad} :diastólica </Text>
                         <Text style={{ color: '#0016e7' }}>glicose  {data.glicose}</Text>
                         <Text style={{ color: '#0016e7' }}>data aferição  {data.data}</Text>
+                        <Text style={{ color: '#FF1493' }}>{data.status}</Text>
                     </TouchableOpacity>
                     </SwipeableRow>
                 </View>
