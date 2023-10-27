@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "appModelo",
-    "slug": "appModelo",
+    "name": "appSaude",
+    "slug": "appsaude",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,7 +19,7 @@
     },
   
     "android": {
-      "package": "com.benassileandro.appModelo",
+      "package": "com.benassileandro.appSaude",
       "versionCode": 1
     },
     "web": {
@@ -27,7 +27,8 @@
     },
     "extra": {
       "eas": {
-        "projectId": "d5f338f6-bf04-4712-a2d8-eaccd1b79758"
+        "projectId": "c07e34e4-ea69-49c3-aa3c-f069a44dd24b"
+       
       }
     }
   }

@@ -4,8 +4,8 @@ module.exports = function(api) {
     presets: ['babel-preset-expo'],
    presets: ['module:metro-react-native-babel-preset'],
     plugins: [
-      //'react-native-reanimated/plugin',
-      ["react-native-reanimated/plugin", { relativoSourceLocation: true }],
+      'react-native-reanimated/plugin',
+      //["react-native-reanimated/plugin", { relativoSourceLocation: true }],
     ],
     
     
